@@ -17,8 +17,8 @@ CREATE TABLE users (
 
 -- genrated a random set of data then insert it into our table
 
-INSERT INTO users (name, email, gender, date_of_birth, salary) VALUES
-('Chirag Sharma', 'chirag.sharma1@example.com', 'Male', '1999-03-15', 45000.00),
+INSERT INTO users (name, email, gender, date_of_birth, salary, age) VALUES
+('Chirag Sharma', 'chirag.sharma1@example.com', 'Male', '1999-03-15', 45000.00,),
 ('Anjali Mehta', 'anjali.mehta2@example.com', 'Female', '2001-08-10', 38000.50),
 ('Rahul Verma', 'rahul.verma3@example.com', 'Male', '1997-11-20', 52000.75),
 ('Sneha Kapoor', 'sneha.kapoor4@example.com', 'Female', '1998-05-05', 60000.00),
@@ -124,5 +124,14 @@ DELETE from users where salary < 50000;
 DELETE from users where id = 3;
 -- DELETE from users; -> delete everthing
 
--- delete the whole table
+-- delete the whole table (not reccomended), always use where clause
 DROP table users;
+
+
+
+-- contraints -> rules are applied on table on coloumn. unique primary key are constraint
+-- duplicate entry is not valid because of unique
+
+ALTER TABLE users ADD age INT;
+UPDATE users set age = 20 where id = 1;
+update users set age = 20 where id = 5;
