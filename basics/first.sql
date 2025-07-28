@@ -40,47 +40,47 @@ INSERT INTO users (name, email, gender, date_of_birth, salary) VALUES
 ('Ritesh Reddy', 'ritesh.reddy20@example.com', 'Male', '1995-09-27', 51000.45);
 
 -- 1. this command will give all users where gender is female
--- SELECT * FROM users WHERE gender!='Male';
+SELECT * FROM users WHERE gender!='Male';
 
 
 -- this command will give list of all user where dob is less than'1995-09-09';
--- SELECT * from users WHERE date_of_birth < '1995-09-09';
+SELECT * from users WHERE date_of_birth < '1995-09-09';
 
 
 -- this command will give list of all user where id is less thann 10
--- SELECT * FROM users WHERE id<10;
+SELECT * FROM users WHERE id<10;
 
 
 -- this command will give where dob is null
--- SELECT * FROM users WHERE date_of_birth IS NULL
+SELECT * FROM users WHERE date_of_birth IS NULL
 
 
 -- this command will give users b/w dob
--- SELECT * from users WHERE date_of_birth BETWEEN '1990-09-09' AND '1999-09-09';
+SELECT * from users WHERE date_of_birth BETWEEN '1990-09-09' AND '1999-09-09';
 
 
 -- this command will give list of all users where salary is > 40,000
--- SELECT * FROM users WHERE salary > 40000;
+SELECT * FROM users WHERE salary > 40000;
 
 
 -- Find all users whose salary is greater than 50,000.
--- SELECT * FROM users WHERE salary > 50000
+SELECT * FROM users WHERE salary > 50000
 
 
 -- List all users who are female.
--- SELECT * FROM users WHERE gender = 'Female';
+SELECT * FROM users WHERE gender = 'Female';
 
 
 -- Show users whose date of birth is after the year 1995.
--- SELECT * FROM users WHERE date_of_birth > '1995';
+SELECT * FROM users WHERE date_of_birth > '1995';
 
 
 -- Find users with the name starting with ‘A’.
--- SELECT * FROM users WHERE name LIke 'A%';
+SELECT * FROM users WHERE name LIke 'A%';
 
 
 -- Display users with email addresses containing 'gmail'.
--- SELECT * FROM users WHERE email LIke '%gmail%';
+SELECT * FROM users WHERE email LIke '%gmail%';
 
 
 -- update the coloum value
@@ -90,3 +90,39 @@ UPDATE users SET date_of_birth = '2004-02-24' WHERE id = 1;
 SELECT * FROM users WHERE date_of_birth < '2000-02-20';
 
 UPDATE users SET name = 'Durgesh nai' WHERE id = 20;
+update users set email = 'durgesh@gmail.com' WHERE id = 20;
+
+
+-- And Or operator
+SELECT * from users where gender = 'Female' AND salary > '70000'
+SELECT * from users where gender = 'Male' AND salary > '70000';
+
+SELECT * from users where gender = 'Male' OR salary > '50000' ORDER BY date_of_birth DESC;
+
+
+
+
+-- updating data
+-- update <table_name> set <col_name> ki value where id = 
+
+UPDATE users SET salary = 50000 WHERE id = 6;
+
+update users set salary = 70000 where id = 7;
+
+UPDATE users SET email = 'Priyadesai@gmail.com' where id = 9;
+UPDATE users SET email = 'chirag@gmail.com' where id = 1;
+
+-- increase salary by 10,000  whose salary < 50,000
+update users set salary = salary + 10000 where salary < 50000;
+
+update users set gender = 'Other' where id = 18;
+
+
+
+-- deleteing data
+DELETE from users where salary < 50000;
+DELETE from users where id = 3;
+-- DELETE from users; -> delete everthing
+
+-- delete the whole table
+DROP table users;
