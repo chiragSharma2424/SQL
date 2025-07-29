@@ -256,3 +256,23 @@ Display the total number of users.
 Count how many Male and Female users are there.
 
 Show average salary of all users.
+
+
+
+SELECT name, email from users;
+SELECT * from users where age > 25;
+SELECT * from users where salary > 60000;
+SELECT name, age from users where gender = 'Female';
+SELECT email from users where email LIke '%@gmail.com%';
+SELECT * from users where name LIke 'S';
+SELECT * from users where age is BETWEEN 20 AND 30;
+SELECT name from users where age = null;
+SELECT * from users where gender != 'Male';
+SELECT name from users  where gender != 'Male';
+SELECT * FROM users ORDER BY salary DESC LIMIT 1;
+SELECT name from users ORDER BY salary ASC;
+SELECT name, email from users ORDER BY salary DESC;
+SELECT COUNT(*) AS total_users from users;
+SELECT COUNT(*) AS total_female_users FROM users WHERE gender = 'Female';
+SELECT COUNT(*) AS total_male_users from users where gender = 'Male';
+SELECT AVG(salary) AS average_salary FROM users;
