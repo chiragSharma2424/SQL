@@ -187,3 +187,72 @@ update users set gender = 'Female' where name LIke 'Sneha';
 UPDATE users SET email = REPLACE(email, '@example.com', '@mydomain.com') WHERE email LIKE '%@example.com';
 update users set salary = 60000 where salary < 55000;
 UPDATE users SET age = 27 WHERE name LIKE '%Shah';
+
+
+
+practicing the delete
+Delete the user whose ID is 10.
+
+Delete all users whose gender is 'Other'.
+
+Delete all users whose age is greater than 60.
+
+Delete users whose email ends with "@mydomain.com".
+
+Delete users with salary less than 40000.
+
+Delete users whose name starts with 'A'.
+
+Delete all users whose age is NULL.
+
+Delete users with the name 'Rahul Verma'.
+
+Delete users whose email contains the word 'test'.
+
+Delete all users whose salary is between 45000 and 50000.
+
+
+-- queries
+DELETE FROM users where id = 10;
+DELETE from users where gender = 'Other';
+delete from users where age > 60;
+delete from users where email LIKE '%mydomain.com%';
+delete from users where salary < 40000;
+delete from users where name LIke 'A%';
+delete * from users where age = null;
+delete from users where name = 'Rahul Verma';
+delete from users where salary BETWEEN 45000 AND 50000;
+
+
+
+
+
+-- Read queries questions
+
+Display names and emails of all users.
+
+Find all users whose age is greater than 25.
+
+List all users with salary more than ₹60,000.
+
+Show name and age of users who are Female.
+
+Find users whose email ends with @gmail.com.
+
+Get all users whose name starts with 'S'.
+
+Display users whose age is between 20 and 30.
+
+Find all users who have NULL age.
+
+List all users whose gender is not 'Male'.
+
+Find the user with the highest salary.
+
+Show names of users in ascending order of salary.
+
+Display the total number of users.
+
+Count how many Male and Female users are there.
+
+Show average salary of all users.
