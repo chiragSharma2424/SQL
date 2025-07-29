@@ -152,3 +152,38 @@ UPDATE users set age = 25 where email = 'ishita@gmail.com'
 update users set age = 30 where id != 1;
 update user set salary = salary - 45000 where name = 'Aditya Singh';
 update users set age = 22 where email LIKE '%@example%';
+
+
+
+10 practice questions
+Increase the salary of the user with ID 3 by 10,000.
+
+Change the email of the user named "Priya Desai" to "priya.desai@gmail.com".
+
+Set the gender of all users with NULL age to "Not Specified".
+
+Update the name of the user with email "divya.nair12@example.com" to "Divya Nairan".
+
+Reduce the salary by 5,000 for all users whose salary is above 60,000.
+
+Set the age of the user named "Aryan Bhatt" to 28.
+
+Update the gender to "Female" for users whose name contains "Sneha".
+
+Change the email domain from "@example.com" to "@mydomain.com" for all users.
+
+Set the salary to 60000 for users whose current salary is less than 55000.
+
+Set the age of all users whose name ends with "Shah" to 27.
+
+
+solutions
+update users set salary = salary + 10000 where id = 3;
+update users set email = 'Priya@gmail.com' where name = 'Priya Desai';
+update users set name = 'Divya sharma' where email = 'divya.nair12@example.com';
+update users set salary = salary - 5000 where salary > 60000;
+update users set age = 28 where name = 'Aryan Bhatt';
+update users set gender = 'Female' where name LIke 'Sneha';
+UPDATE users SET email = REPLACE(email, '@example.com', '@mydomain.com') WHERE email LIKE '%@example.com';
+update users set salary = 60000 where salary < 55000;
+UPDATE users SET age = 27 WHERE name LIKE '%Shah';
