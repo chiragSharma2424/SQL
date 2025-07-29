@@ -132,6 +132,23 @@ DROP table users;
 -- contraints -> rules are applied on table on coloumn. unique primary key are constraint
 -- duplicate entry is not valid because of unique
 
+
+-- basic queries for practice
+Update the salary of the user whose ID is 2 to 70000.
+✅ Change the name of the user with ID 5 to "Karan Kumar".
+✅ Set the age of the user whose email is "ishita@gmail.com" to 24.
+✅ Change the gender of the user with ID 11 to "Other".
+✅ Update the salary to 80000 for the user named "Neha Yadav".
+✅ Set the age to 30 for all users whose age is currently NULL.
+✅ Reduce the salary to 45000 for the user named "Aditya Singh".
+✅ Set the age to 22 for users whose email ends with "@example.com".
+
+
 ALTER TABLE users ADD age INT;
 UPDATE users set age = 20 where id = 1;
 update users set age = 20 where id = 5;
+update users set email = 'vikas@gmail.com' where id = 10;
+UPDATE users set age = 25 where email = 'ishita@gmail.com'
+update users set age = 30 where id != 1;
+update user set salary = salary - 45000 where name = 'Aditya Singh';
+update users set age = 22 where email LIKE '%@example%';
